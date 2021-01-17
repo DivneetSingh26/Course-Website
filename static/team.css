@@ -1,0 +1,90 @@
+/* Team page */
+.team{
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.instructor-content-1, .instructor-content-2,.instructor-content-3{
+    display: inline;
+    width: 33.33%;
+    padding-left: 1em;
+    border-radius: 1em;
+    background-color: rgba(83, 82, 237,1.0);
+    margin: 1rem;
+}
+
+
+.text-content{
+    padding: 1em;
+}
+
+.instructor-img{
+    border-radius: 25px;
+    width: 220px;
+    height: 250px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructor-name{
+    text-align: center;
+    padding: 1em;
+}
+
+.instructor{
+    text-align: center;
+}
+
+.email{
+    font-size: smaller;
+}
+
+
+@media only screen and (max-width: 1209px) {
+    #container{
+        margin: auto;
+    }
+
+    /* Course page */
+    h3{
+        text-align: center;
+    }
+    .content{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto;
+    }
+    #course-text{
+        margin-top: 2rem !important;
+        background-color: rgba(83, 82, 237,1.0);
+        padding: 2em;
+        border-radius: 25px;
+        margin-bottom: 1em !important;
+        margin: 0 10%;
+    }
+
+    /* team page */
+    .team{
+        display: block;
+        margin: 0 10%;
+    }
+
+    .instructor-content-1, .instructor-content-2, .instructor-content-3{
+        display: block;
+        width: auto;
+        border-radius: 1em;
+        background-color: rgba(83, 82, 237,1.0);
+        margin: 1rem;
+    }
+  }
+
+  @media only screen and (max-height: 500px) and (max-width: 1300px) {
+    /* General */
+    .top-btn{
+        margin-left:94%;
+        margin-top: 80vh;
+    }
+  }

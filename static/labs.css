@@ -1,0 +1,91 @@
+/* Labs page */
+.text-content{
+    margin-top: 2rem !important;
+    background-color: rgba(83, 82, 237,1.0);
+    padding: 2em;
+    border-radius: 25px;
+    margin-bottom: 1em !important;
+    margin: 0 10%;
+}
+
+#labs-wrapper{
+    display: flex;
+    background-color: rgba(83, 82, 237,1.0);
+    padding: 2em;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 7em;
+}
+
+#labs-wrapper a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#labs-wrapper a:hover{
+    font-style: italic;
+    color: #3b87f5;
+}
+
+#lab-weeks{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    border-right: 2px solid white;
+}
+
+#lab-source{
+    padding: 1em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-right: 2px solid white;
+}
+
+#lab-soln{
+    padding: 1em;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.col-title{
+    border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 1209px) {
+    #container{
+        margin: auto;
+    }
+
+    /* Course page */
+    h3{
+        text-align: center;
+    }
+    .content{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto;
+    }
+    #course-text{
+        margin-top: 2rem !important;
+        background-color: rgba(83, 82, 237,1.0);
+        padding: 2em;
+        border-radius: 25px;
+        margin-bottom: 1em !important;
+        margin: 0 10%;
+    }
+
+    /* labs page */
+    #lab-desc{
+        display: none;
+    }
+
+    #labs-wrapper{
+        font-size: small;
+        margin-top: 2rem !important;
+    }
+  }

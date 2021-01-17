@@ -1,0 +1,151 @@
+/* Flash */
+.flash{
+  width: 50%;
+  margin: 0 auto;
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+.flashClose{
+  display: inline-flex;
+  margin-left: 2rem;
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.alert-success{
+  background-color: rgba(62, 223, 83, 0.9);
+  border-radius: 2px;
+  text-align: center;
+  font-size: large;
+  padding: 0.5em;
+}
+
+#select-inst{
+    border: none;
+    background-color: #3b87f5;
+    color: white;
+    text-decoration: none;
+    margin-top: 1em;
+    text-align: center;
+    font-size: large;
+    width: 100%;
+    height: 2em;
+}
+
+
+.alert-danger{
+  background-color: rgba(255, 99, 71, 0.7);
+  border-radius: 2px;
+  text-align: center;
+  font-size: large;
+  padding: 0.5em;
+  }
+
+/* Anon Feedback page */
+#feedback-wrapper{
+    display: block;
+    background-color: rgba(83, 82, 237,1.0);
+    padding: 1em;
+    margin-left: 29%;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 7em;
+    width: 40%;
+    margin-top: 4em;
+}
+
+.question{
+    text-align: center;
+}
+
+.question input{
+    width: 60%;
+    height: 2rem;
+    border-radius: 2px;
+    border:none;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+#input-email{
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.question textarea{
+    min-height: 4rem;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 9rem;
+    border-radius: 2px;
+    border:none;
+
+}
+
+#form-btn{
+    margin: 0;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: rgba(59, 135, 245, 0.9);
+    text-align: center;
+    border-radius: 5px;
+    border:none;
+    color: white;
+    height: 50px;
+}
+
+#btn{
+    margin: auto;
+}
+
+#form-btn:hover{
+    background-color: rgba(59, 135, 245, 1);
+}
+
+
+@media only screen and (max-width: 1209px) {
+    #container{
+        margin: auto;
+    }
+
+    /* Course page */
+    h3{
+        text-align: center;
+    }
+    .content{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto;
+    }
+    #course-text{
+        margin-top: 2rem !important;
+        background-color: rgba(83, 82, 237,1.0);
+        padding: 2em;
+        border-radius: 25px;
+        margin-bottom: 1em !important;
+        margin: 0 10%;
+    }
+
+    /* anon feedback page */
+    #feedback-wrapper{
+        width: auto;
+        margin: 10%;
+    }
+
+    #smiley-wrapper{
+        width: 40%;
+    }
+  }

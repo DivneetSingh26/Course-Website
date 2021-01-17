@@ -1,0 +1,159 @@
+#grade{
+  border: none;
+  background-color: #3b87f5;
+  color: white;
+  text-decoration: none;
+  margin-top: 1em;
+  text-align: center;
+  font-size: large;
+  width: 50%;
+  height: 2em;
+}
+
+.page-name{
+    color: #eee !important;
+}
+
+.mark-btn{
+  margin: 0;
+  margin-top: 2rem;
+  background-color: rgba(59, 135, 245, 0.9);
+  text-align: center;
+  border-radius: 5px;
+  border:none;
+  color: white;
+  height: 35px;
+}
+
+.mark-btn:hover{
+  background-color:  #0c50af;
+}
+
+.div-label{
+  display: inline;
+}
+
+#box{
+  display: flex;
+  flex-direction: column;
+}
+
+.add-mark{
+  display: inline;
+  text-align: center;
+}
+
+.add-mark input{
+  width: 100%;
+  border: none;
+  background-color: #3b87f5;
+  color: white;
+  text-decoration: none;
+  margin-top: 1em;
+  text-align: center;
+  font-size: large;
+  width: 50%;
+  height: 2em;
+}
+
+.left, .mid,.right{
+  margin: 0 auto;
+  text-align: center;
+}
+
+#questions-box, .add-mark{
+  border: 2px solid white;
+  margin-top: 1em;
+  padding-bottom: 1em;
+}
+
+.left p, .mid p, .right p{
+  border-left: none !important;
+  border-right: none !important;
+  /*padding: 1em;*/
+}
+
+
+@media only screen and (max-width: 1209px) {
+  #container{
+      margin: auto;
+  }
+
+  /* Course page */
+  h3{
+      text-align: center;
+  }
+  .content{
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
+      width: 90%;
+  }
+  #course-text{
+      margin-top: 2rem !important;
+      background-color: rgba(83, 82, 237,1.0);
+      padding: 2em;
+      border-radius: 25px;
+      margin-bottom: 1em !important;
+      margin: 0 10%;
+  }
+
+  .left p, .mid p, .right p{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  /* Student marks */
+  #box{
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #grade{
+    margin-bottom: 0.5em;
+  }
+
+  #inst-feedback-wrapper {
+    padding: 2em;
+  }
+  .feedback{
+    width: 5px;
+  }
+
+  .add-mark{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 -18;
+  }
+
+  .mark-btn{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .your-feedback{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  /*grade*/
+  #inst-feedback-wrapper {
+    padding: 2em;
+  }
+  .feedback{
+    width: 1px;
+  }
+  #grade{
+    margin-bottom: 0.5em;
+  }
+}

@@ -1,0 +1,95 @@
+/*Contents*/
+.asign{
+    display: flex;
+    flex-direction: row;
+}
+
+.a-name{
+    text-align: center;
+    background-color: rgba(83, 82, 237,1.0);
+    padding:0;
+}
+
+.assignment{
+    width: 33.33%;
+    background-size: auto;
+    margin: 0 2%;
+    margin-top: 50px;
+    border-radius: 25px 25px 0 0;
+}
+
+.a-content{
+    color: white;
+    background-color: rgba(83, 82, 237,1.0);
+    padding: 1rem;  
+    border-radius: 0 0 25px 25px;
+
+}
+
+.a-content p {
+    font-size: 1rem;
+}
+
+.preview{
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+
+.assignment-pill:hover{
+    box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.5);
+    border-radius:25px;
+}
+
+/* Lectures page */
+#row1, #row2{
+    display: flex;
+    flex-direction: row;
+}
+
+.lec:hover{
+    box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.5);
+    border-radius:25px;
+}
+
+
+@media only screen and (max-width: 1209px) {
+    #container{
+        margin: auto;
+    }
+
+    /* Course page */
+    h3{
+        text-align: center;
+    }
+    .content{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 auto;
+    }
+    #course-text{
+        margin-top: 2rem !important;
+        background-color: rgba(83, 82, 237,1.0);
+        padding: 2em;
+        border-radius: 25px;
+        margin-bottom: 1em !important;
+        margin: 0 10%;
+    }
+
+    /*  Lecture page */
+    .asign{
+        display: block;
+        margin:10%;
+    }
+
+    .assignment{
+        margin-left: 0;
+        margin-right: 0;
+        width:100%;
+        padding-left:0;
+    }
+
+    .a-desc{
+        text-align: center;
+    }
+  }
