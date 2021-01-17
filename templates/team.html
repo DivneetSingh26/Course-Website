@@ -1,0 +1,168 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../static/team.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+        <title>CSCB20</title>
+    </head>
+
+    <body>
+    <!-- START WRAPPER -->
+        <div class="wrapper">
+            
+                  <!-- start navbar -->
+      <div id="navigation-bar">
+        <div id="container">
+            <div class="nav">
+            <h1 id="course-label"><a href="/index">CSCB20</a></h1>
+            <p id="course-desc">Introduction to Databases and Web Applications</p>
+            <nav>
+                <a href="/course">Course</a>
+                <a href="/lectures">Lectures</a>
+                <a class="cur-link" href="/team">Team</a>
+                <a href="/labs">Labs</a>
+                <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+                <a href="/feedback">Anon Feedback</a>
+                <a href="/assignments">Assignments</a>
+                <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+                <a href="https://piazza.com/" target="_blank">Piazza</a>
+                <a class="general-link" href="/account">Account</a>
+                <a href="/marks">Grades</a>
+                {%if session['type'] == 'instructor'%}
+                  <a href="/remarks">Remark Requests</a>
+                {%endif%}
+                <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+
+            </nav>
+            </div>
+        </div>
+      </div>
+      <!--end navbar -->
+                  </div>
+            
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+            <!-- start content -->
+            <div class="content">
+                <h1 class="page-name">Team</h1>
+                <div class="line"></div>
+
+                <!-- start team -->
+                <div class="team">
+
+                    <!-- start instructor content 1 -->
+                    <div class="instructor-content-1">
+                        <h3 class="instructor-name"><b>Course Instructor</b></h3>
+                        <h3 class="instructor">Dr. Anna Bretscher</h3>
+                        <img class="instructor-img" src="../static/images/anna.jpg"></img>
+
+                        <!-- start text div -->
+                        <div class="text-content">
+                            <p><b>Biography:</b></br>
+                            Dr. Bretscher joined the department in 2004 after completing a Ph.D in Graph Theory at the 
+                            University of Toronto and Master's and Bachelor's degrees at Queen's University. 
+                            After teaching a course as a graduate student, Anna came to the realization that teaching 
+                            students theoretical concepts is where her passion lies. In particular, she loves the challenge 
+                            of simplifying difficult concepts and the reward of successfully teaching new topics.
+                            </p>
+
+                            <h3><b>Contact Information</b></h3>
+                            <div class="line"></div>
+                            <h4>Dr. Anna Bretscher</h4>
+                            <p class="email"><b>Email:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;bretscher@utsc.utoronto.ca</p>
+                            <p><b>Office:</b> &emsp; &emsp; &emsp; &emsp; IC493</p>
+                            <p><b>Phone:</b> &emsp; &emsp; &emsp; &ensp; &nbsp;(416) 208-4745</p>
+                            <p><b>Office Hours:</b> &emsp; &ensp;  W 11:00-12:00</p>
+                        </div>
+                        <!-- end text div -->
+
+                    </div>
+                    <!-- end instructor content 1 -->
+
+
+                    <!-- start instructor content 2 -->
+                    <div class="instructor-content-2">
+                        <h3 class="instructor-name"><b>Teaching Assistant</b></h3>
+                        <h3 class="instructor">Anon</h3>
+                        <img class="instructor-img" src="../static/images/default.png"></img>
+
+                        <!-- start text div -->
+                        <div class="text-content">
+                            <p><b>Biography:</b></br>
+                            Dr. Bretscher joined the department in 2004 after completing a Ph.D in Graph Theory at the 
+                            University of Toronto and Master's and Bachelor's degrees at Queen's University. 
+                            After teaching a course as a graduate student, Anna came to the realization that teaching 
+                            students theoretical concepts is where her passion lies. In particular, she loves the challenge 
+                            of simplifying difficult concepts and the reward of successfully teaching new topics.
+                            </p>
+
+                            <h3><b>Contact Information</b></h3>
+                            <div class="line"></div>
+                            <h4>Dr. Anna Bretscher</h4>
+                            <p class="email"><b>Email:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;bretscher@utsc.utoronto.ca</p>
+                            <p><b>Office:</b> &emsp; &emsp; &emsp; &emsp; IC493</p>
+                            <p><b>Phone:</b> &emsp; &emsp; &emsp; &ensp; &nbsp;(416) 208-4745</p>
+                            <p><b>Office Hours:</b> &emsp; &ensp;  W 11:00-12:00</p>
+                        </div>
+                        <!-- end text div -->
+
+                    </div>
+                    <!-- end instructor content  -->
+
+
+                    <!-- start instructor content 3 -->
+                    <div class="instructor-content-3">
+                        <h3 class="instructor-name"><b>Teaching Assistant</b></h3>
+                        <h3 class="instructor">Anon</h3>
+                        <img class="instructor-img" src="../static/images/default.png"></img>
+
+                        <!-- start text div -->
+                        <div class="text-content">
+                            <p><b>Biography:</b></br>
+                            Dr. Bretscher joined the department in 2004 after completing a Ph.D in Graph Theory at the 
+                            University of Toronto and Master's and Bachelor's degrees at Queen's University. 
+                            After teaching a course as a graduate student, Anna came to the realization that teaching 
+                            students theoretical concepts is where her passion lies. In particular, she loves the challenge 
+                            of simplifying difficult concepts and the reward of successfully teaching new topics.
+                            </p>
+
+                            <h3><b>Contact Information</b></h3>
+                            <div class="line"></div>
+                            <h4>Dr. Anna Bretscher</h4>
+                            <p class="email"><b>Email:</b> &emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; &nbsp;bretscher@utsc.utoronto.ca</p>
+                            <p><b>Office:</b> &emsp; &emsp; &emsp; &emsp; IC493</p>
+                            <p><b>Phone:</b> &emsp; &emsp; &emsp; &ensp; &nbsp;(416) 208-4745</p>
+                            <p><b>Office Hours:</b> &emsp; &ensp;  W 11:00-12:00</p>
+                        </div>
+                        <!-- end text div -->
+
+                    </div>
+                    <!-- end instructor content 3 -->
+
+                </div>
+                <!-- end team -->
+
+                <div class="empty-div"></div>
+            </div>
+            <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+        
+        </div>
+        <!-- end wrapper -->
+    </body>
+</html>

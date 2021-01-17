@@ -1,0 +1,88 @@
+<!DOCTYPE html!>
+<html>
+
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../static/login.css">
+    <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>CSCB20</title>
+  </head>
+
+  <body>
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+      <!-- start front -->
+      <div class="front">
+
+        <div id="stuff">
+            <div class='flash'>
+              {% include 'errorFlash.html' %}
+              {% block body %}{% endblock %}
+            </div>
+            <!-- start login box -->
+            <div id="login-box">
+                <div>
+                    <div class="line-div">
+                        <h1 id="course-label"><a class="cur-lin general-link" href="/index">CSCB20</a></h1>
+                        <span class="css-line"></span>
+                    </div>
+                </div>
+                <form method="post" action="">
+                    <div id="info">
+                        <div id="email"> 
+                            <input class="input-field" type="text" placeholder=" E-mail" name="email" value="{{
+                                request.form.email }}" required>                        
+                        </div>
+                        <div id="password">
+                            <input class="input-field" type="password" placeholder="Password" name="password" value="{{
+                                request.form.password }}" required>
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <button class="form-btn login-btn" value="Login">Login</button>
+                    </div>
+
+                    <div id="create-acc">
+                      <a class="general-link" href="/create">No Account? Register Here</a>
+                    </div>
+                </form>
+                {% if error %}
+                    <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+            </div>
+            <!-- end login-box -->
+
+        </div>
+        <!-- end stuff -->
+
+      </div>
+      <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- script -->
+    <script src="../static/js/flash.js">
+    </script>
+    <!-- end script-->
+
+  </body>
+
+</html>

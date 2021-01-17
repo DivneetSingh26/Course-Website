@@ -1,0 +1,158 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../static/feedback.css">
+        <link rel="stylesheet" type="text/css" href="../static/instFeedback.css">
+        <link rel="stylesheet" type="text/css" href="../static/studentMarks.css">
+        <link rel="stylesheet" type="text/css" href="../static/instGrade.css">
+        <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>CSCB20</title>
+    </head>
+
+    <body>
+        <!-- START WRAPPER -->
+        <div class="wrapper">
+
+            <!-- start navbar -->
+            <div id="navigation-bar">
+                <div id="container">
+                    <div class="nav">
+                        <h1 id="course-label">
+                            <a href="/index">CSCB20</a>
+                        </h1>
+                        <p id="course-desc">Introduction to Databases and Web Applications</p>
+                        <nav>
+                            <a href="/course">Course</a>
+                            <a href="/lectures">Lectures</a>
+                            <a href="/team">Team</a>
+                            <a href="/labs">Labs</a>
+                            <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+                            <a href="/feedback">Anon Feedback</a>
+                            <a href="/assignments">Assignments</a>
+                            <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+                            <a href="https://piazza.com/" target="_blank">Piazza</a>
+                            <a href="/account">Account</a>
+                            <a class="cur-link" href="/marks">Grades</a>
+                            <a href="/remarks">Regrade Requests</a>
+                            <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--end navbar -->
+
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+            <!-- start content -->
+            <div class="content">
+                <div class='flash'>
+                    {% include 'errorFlash.html' %}
+                    {% block body %}{% endblock %}
+                </div>
+                <!-- start feedback form -->
+                <form method="post" action="">
+                    <!-- start feedback wrapper -->
+                    <div id="inst-feedback-wrapper">
+                        <h1 class="page-name">Enter New Assessment Grade</h1>
+                        <!-- start questions -->
+                        <div id="box">
+                            <div class="add-mark">
+                                <div class="left">
+                                    <label for="student">Student E-mail:</br>
+                                </label>
+                                <input name="student" type="email" required class="feedback" value="{{ request.form.student }}"></input>
+                            </div>
+
+                            <div class="mid">
+                                <label for="assessment">Assessment Name:</br>
+                            </label>
+                            <input name="assessment" required class="feedback" value="{{ request.form.assessment }}"></input>
+                        </div>
+
+                        <div class="right">
+                            <label for="grade">Grade:</br>
+                        </label>
+                        <div id="remark-row">
+                            <input id="grade" required name="grade" min="0" max="100" type="number" value="{{ request.form.grade  }}"></input>
+                            <button class="mark-btn" type="submit" value="Mark">Submit Mark</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end question 3 -->
+        </div>
+        <!-- end feedback wrapper -->
+    </form>
+    <!-- end feedback form -->
+
+    <!-- start feedback wrapper -->
+    <div id="inst-feedback-wrapper">
+        <h1 class="page-name">Marks</h1>
+        <!-- start questions -->
+        {% if allMarks|length == 0 %}
+            <div class="none">
+                <h1 name="reason" class="feedback">There are no student grades.</br>
+                </h1>
+            </div>
+
+        {% endif %}
+    {%for i in allMarks%}
+
+        <div id="questions-box">
+            <div class="your-feedback">
+                <div class="left">
+                    <p name="student" class="feedback">{{ i[1] }}</br>
+                </p>
+            </div>
+            <div class="mid">
+                <p name="assessment" class="feedback">{{ i[2] }}</br>
+            </p>
+        </div>
+
+        <div class="right">
+            <p name="grade" class="feedback">{{ i[3] }}</br>
+        </p>
+    </div>
+</div>
+</div>
+{%endfor%}
+<!-- end question 3 -->
+</div>
+<!-- end feedback wrapper -->
+
+</div>
+<!-- end content -->
+<script>
+$(document).ready(function () {
+$("#closeX").click(function () {
+$(".flash")
+    .hide("slow")
+    .then(window.location = "/marks");
+});
+});
+</script>
+<!-- start footer -->
+<div id="footer">
+<div id="foot-text">
+<div  class="footer-content">
+<p id="faculty-link">
+    <a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a>
+</p>
+<p>Site designed by Jayesh Khullar and Divneet Singh</p>
+</div>
+</div>
+</div>
+<!-- end footer -->
+
+</div>
+<!-- end wrapper -->
+</body>
+</html>

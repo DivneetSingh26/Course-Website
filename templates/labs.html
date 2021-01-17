@@ -1,0 +1,130 @@
+<!DOCTYPE html!>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../static/labs.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+    <title>CSCB20</title>
+</head>
+
+<body>
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+<!-- start navbar -->
+      <div id="navigation-bar">
+        <div id="container">
+            <div class="nav">
+            <h1 id="course-label"><a href="/index">CSCB20</a></h1>
+            <p id="course-desc">Introduction to Databases and Web Applications</p>
+            <nav>
+                <a href="/course">Course</a>
+                <a href="/lectures">Lectures</a>
+                <a href="/team">Team</a>
+                <a class="cur-link" href="/labs">Labs</a>
+                <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+                <a href="/feedback">Anon Feedback</a>
+                <a href="/assignments">Assignments</a>
+                <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+                <a href="https://piazza.com/" target="_blank">Piazza</a>
+                <a class="general-link" href="/account">Account</a>
+                <a href="/marks">Grades</a>
+                {%if session['type'] == 'instructor'%}
+                  <a href="/remarks">Remark Requests</a>
+                {%endif%}
+                <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+            </nav>
+            </div>
+        </div>
+      </div>
+      <!--end navbar -->
+
+            
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+        <!-- start content -->
+        <div class="content">
+
+            <!-- start instructor content 3 -->
+            <div class="lab-content">
+                        <h1 class="page-name"><b>Labs</b></h1>
+                        <div class="line"></div>
+                <!-- start text div -->
+                <div class="text-content">
+                    <div id="lab-desc">
+                        <h2 class="sub-section-title">Tutorial Sections</h2>
+                        <p>
+                            Please go the tutorial section that you signed up for on ROSI.
+                        </p>
+
+                        <h2 class="sub-section-title">Tutorial Exercises</h2>
+                        <div class="line"></div>
+                        <p>This section contains the tutorial exercises.
+                            </br>Tutorials are held every week. The first tutorial week is week 2.
+                            Please make use of this valuable resource!
+                        </p>
+                </div>
+                    <!-- start labs wrapper -->
+                    <div id="labs-wrapper">
+
+                        <!-- start labs week -->
+                        <div id="lab-weeks">
+                            <h4 class="col-title">Week</h4>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                        </div>
+                        <!-- end lab weeks -->
+
+                        <!-- start labs source -->
+                        <div id="lab-source">
+                            <h4 class="col-title">Lab</h4>
+                            <p><a href="../static/files/tut.pdf" target="_blank">Python Commands</a></p>
+                            <p><a href="../static/files/tut.pdf" target="_blank">SQL Practise</a></p>
+                            <p><a href="../static/files/tut.pdf" target="_blank">Some HTML</a></p>
+                            <p><a href="../static/files/tut.pdf" target="_blank">JS review</a></p>
+                        </div>
+                        <!-- end lab source -->
+
+                        <!-- start labs soln -->
+                        <div id="lab-soln">
+                            <h4 class="col-title">Solutions</h4>
+                            <p>None</p>
+                            <p><a href="../static/files/tutSoln.pdf" target="_blank">Answers</a></p>
+                            <p><a href="../static/files/tutSoln.pdf" target="_blank">Answers</a></p>
+                            <p><a href="../static/files/tutSoln.pdf" target="_blank">Answers</a></p>
+                        </div>
+                        <!-- end lab soln -->
+                    </div>
+                    <!-- end labs wrapper -->
+                </div>
+                <!-- end text div -->
+
+            </div>
+            <!-- end instructor content 3 -->
+
+        </div>
+        <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+
+    </div>
+    <!-- end wrapper -->
+</body>
+
+</html>

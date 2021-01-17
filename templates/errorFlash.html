@@ -1,0 +1,21 @@
+<!--this flash alert template was taken from here:
+  https://stackoverflow.com/questions/40949746/how-to-display-flashing-message-without-reloading-the-page-in-flask-->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert-success alert-{{ category }}">{{ message }} <div class="flashClose"><p id="closeX">x</p></div>
+      <script type="text/javascript" src="{{ url_for('static', filename = './js/dynamicInput.js') }}">
+      </script>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{% if error %}
+  <div class="alert-danger">{{error}}
+  </div>
+{% endif %}
+
+{% if msg %}
+  <div class="alert-success">{{msg}}</div>
+{% endif %}

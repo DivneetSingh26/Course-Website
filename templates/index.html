@@ -1,0 +1,159 @@
+<!DOCTYPE html!>
+<html>
+
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../static/home.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSCB20</title>
+    <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+  </head>
+
+  <body>
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+      <!-- start navbar -->
+      <div id="navigation-bar">
+        <div id="container">
+          <div class="nav">
+            <h1 id="course-label"><a class="cur-link" href="/index">CSCB20</a></h1>
+            <p id="course-desc">Introduction to Databases and Web Applications</p>
+            <nav>
+              <a class="general-link" href="/account">Welcome {{ accountInfo }}</a>
+              <a href="/course">Course</a>
+              <a href="/lectures">Lectures</a>
+              <a href="/team">Team</a>
+              <a href="/labs">Labs</a>
+              <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+              <a href="/feedback">Anon Feedback</a>
+              <a href="/assignments">Assignments</a>
+              <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+              <a href="https://piazza.com/" target="_blank">Piazza</a>
+              <a class="general-link" href="/account">Account</a>
+              <a href="/marks">Grades</a>
+              {%if session['type'] == 'instructor'%}
+                <a href="/remarks">Remark Requests</a>
+              {%endif%}
+              <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--end navbar -->
+            
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+      <!-- start front -->
+      <div class="front">
+
+        <div id="stuff">
+            
+            <div class="left">
+              <div class="blob">
+                  <!-- Calendar -->
+                  <div id="calendar">
+                      <iframe src="https://calendar.google.com/calendar/embed?src=07js989maqpb9le0ussgcu6qq8%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="320px" height="400" frameborder="0" scrolling="no"></iframe>
+                  </div>
+                </div>
+            </div>
+
+          <div class="mid">
+            <div class="blob">
+              <!-- Map -->
+              <div id="static-map">
+                  <img id="map" src="../static/images/map.png" frameborder="0">
+                  </img>
+              </div>
+
+              <!-- Deadlines -->
+              <div class="deadlines">
+                  <div class="box-text">
+                      <h3>Deadlines</h3>
+                  <div class="underline"></div>
+
+                      <div class="inner-text">
+                          <h4>Assignment 3:</h4>
+                          <p>Febuary 29th @ 11:59pm</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="right">
+            
+          <div class="blobs">
+            <!-- Lecture -->
+            <div class="most-recent">
+              <div class="box-text">
+                <h3>Most Recent Lecture:</h3>
+                <div class="underline"></div>
+
+                <a class="general-link" target="_blank" href="../static/files/lec.pdf">Lecture 6</a>
+              
+              </div>
+              <!-- end box test -->
+            
+            </div>
+            <!-- end assignment -->
+
+            <!-- Assignment -->
+            <div class="most-recent">
+              <div class="box-text">
+                <h3>Most Recent Assignment:</h3>
+                <div class="underline"></div>
+
+                <a class="general-link" target="_blank" href="../static/files/a1.pdf">Assignment 3</a>
+              
+            </div>
+              <!-- end box text -->
+
+            </div>
+            <!-- end assignment -->
+
+             <!-- Labs -->
+             <div class="most-recent">
+              <div class="box-text">
+                <h3>Most Recent Lab:</h3>
+                <div class="underline"></div>
+
+                <a class="general-link" target="_blank" href="../static/files/tut.pdf">Lab 4</a>
+              
+            </div>
+              <!-- end box text -->
+
+            </div>
+            <!-- end labs -->
+            
+          </div>
+          <!-- end blobs -->
+
+          </div>
+          <!-- end right -->
+
+        </div>
+        <!-- end stuff -->
+      </div>
+      <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+
+    </div>
+    <!-- end wrapper -->
+  </body>
+
+</html>

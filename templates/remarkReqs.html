@@ -1,0 +1,131 @@
+<!DOCTYPE html!>
+<html>
+    <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="../static/feedback.css">
+        <link rel="stylesheet" type="text/css" href="../static/instFeedback.css">
+        <link rel="stylesheet" type="text/css" href="../static/studentMarks.css">
+        <link rel="stylesheet" type="text/css" href="../static/instRemark.css">
+        <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>CSCB20</title>
+    </head>
+
+    <body>
+    <!-- START WRAPPER -->
+        <div class="wrapper">
+            
+<!-- start navbar -->
+      <div id="navigation-bar">
+        <div id="container">
+            <div class="nav">
+            <h1 id="course-label"><a href="/index">CSCB20</a></h1>
+            <p id="course-desc">Introduction to Databases and Web Applications</p>
+            <nav>
+                <a href="/course">Course</a>
+                <a href="/lectures">Lectures</a>
+                <a href="/team">Team</a>
+                <a href="/labs">Labs</a>
+                <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+                <a href="/feedback">Anon Feedback</a>
+                <a href="/assignments">Assignments</a>
+                <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+                <a href="https://piazza.com/" target="_blank">Piazza</a>
+                <a href="/account">Account</a>
+                <a href="/marks">Grades</a>
+                <a class="cur-link" href="/remarks">Regrade Requests</a>
+                <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+
+            </nav>
+            </div>
+        </div>
+      </div>
+      <!--end navbar -->
+                        
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+            <!-- start content -->
+            <div class="content">
+                <div class='flash'>
+                  {% include 'errorFlash.html' %}
+                  {% block body %}{% endblock %}
+                </div>
+                <!-- start feedback form -->
+              {% if remarks|length == 0 %}
+              <div id="inst-feedback-wrapper">
+                        <h1 class="page-name">Remark Requests</h1>
+                        <!-- start questions -->
+                        <div id="questions-box">                                  
+                                  <div class="none">
+                                      <h1 name="reason" class="feedback">You have no regrade requests pending.</br></h1>
+                                  </div>                                  
+                            </div>
+                            <!-- end question 3 -->
+                      </div>
+              {% endif %}
+              
+              {%for i in remarks%}
+                <form method="post" action="">
+                    <!-- start feedback wrapper -->
+                    <div id="inst-feedback-wrapper">
+                        <h1 class="page-name">Remark Requests</h1>
+                        <!-- start questions -->
+                        <div id="questions-box">
+                                <div class="your-feedback">
+                                  <div class="left">
+                                    <label for="as-name">Assessment Name:</br></label>
+                                      <p name="as-name" class="feedback">{{ i[2] }} for {{ i[1] }}</br></p>
+                                  </div>
+                                  
+                                  <div class="mid">
+                                    <label for="reason">Remark Reason:</br></label>   
+                                      <p name="reason" class="feedback">{{ i[3] }}</br></p>
+                                  </div>
+
+                                  <div class="right">
+                                    <label for="newMark">Grade:</br></label>
+                                    <div id="remark-row">
+                                        <input id="grade" name="newMark" min="0" max="100" type="number" placeholder="{{ i[4] }}"></input>
+                                        <input type="hidden" name="regradeFor" value="{{ i[1] }}" />
+                                        <input type="hidden" name="regradeAs" value="{{ i[2] }}" />
+                                        <button class="regrade-btn" type="submit" value="Regrade">Update Mark</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- end question 3 -->
+                      </div>
+                <!-- end feedback wrapper -->
+                </form>
+                <!-- end feedback form -->
+              {%endfor%}
+            </div>
+            <!-- end content -->
+                <script>
+                  $(document).ready(function(){
+                    $("#closeX").click(function() {
+                      $(".flash").hide("slow").then(window.location = "/remarks");
+                    });
+                  });
+                </script>
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+        
+        </div>
+        <!-- end wrapper -->
+    </body>
+</html>

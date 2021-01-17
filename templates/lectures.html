@@ -1,0 +1,276 @@
+<!DOCTYPE html!>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../static/lectures.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+    <title>CSCB20</title>
+</head>
+
+<body>
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+      <!-- start navbar -->
+      <div id="navigation-bar">
+        <div id="container">
+            <div class="nav">
+            <h1 id="course-label"><a href="/index">CSCB20</a></h1>
+            <p id="course-desc">Introduction to Databases and Web Applications</p>
+            <nav>
+                <a href="/course">Course</a>
+                <a class="cur-link" href="/lectures">Lectures</a>
+                <a href="/team">Team</a>
+                <a href="/labs">Labs</a>
+                <a href="../static/files/syllabus.pdf" target="_blank">Syllabus</a>
+                <a href="/feedback">Anon Feedback</a>
+                <a href="/assignments">Assignments</a>
+                <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank">Markus</a>
+                <a href="https://piazza.com/" target="_blank">Piazza</a>
+                <a class="general-link" href="/account">Account</a>
+                <a href="/marks">Grades</a>
+                {%if session['type'] == 'instructor'%}
+                  <a href="/remarks">Remark Requests</a>
+                {%endif%}
+                <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+
+            </nav>
+            </div>
+        </div>
+      </div>
+      <!--end navbar -->
+        </div>
+            
+            <div  class="top-btn">
+                <h1>
+                    <a href="#">^</a>
+                </h1>
+            </div>
+        <!-- start content -->
+        <div class="content">
+            <div id="lecture-text">
+                <h1 class="page-name">Lectures</h1>
+                <div class="line"></div>
+
+                <!-- start lectures -->
+                <div class="asign">
+
+                    <!-- start lecture content 1 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecOne.png"></img>
+                            </a>
+
+                            <!-- start text div -->
+                            <div class="a-content">
+
+                                <h3 class="a-name">Lecture 1</h3></br>
+                                <div class="a-desc">
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p> Introduction, DB background</p>
+                                    
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 1 -->
+
+                    <!-- start lecture content 2 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecTwo.png"></img>
+                            </a>
+
+                            <!-- start text div -->
+                            <div class="a-content">
+
+                                <h3 class="a-name">Lecture 2</h3></br>
+                                <div class="a-desc">
+
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p>Schema Diagrams, RA</p>
+
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 2 -->
+
+                    <!-- start lecture content 3 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+                                
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecThree.png"></img>
+                            </a>
+
+                            <!-- start text div -->
+                            <div class="a-content">
+                                <h3 class="a-name">Lecture 3</h3></br>
+                                <div class="a-desc">
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p> RA, SQL, MySQL</p>
+
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 3 -->
+
+                </div>
+                <!-- end lectures -->
+
+                <!-- start team -->
+                <div class="asign">
+                    <!-- start lecture content 4 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecFour.png"></img>
+                            </a>
+
+                            <!-- start text div -->
+                            <div class="a-content">
+                                <h3 class="a-name">Lecture 4</h3></br>
+                                <div class="a-desc">
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p>MySQL, Editing Tables</p>
+
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 4 -->
+
+                    <!-- start lecture content 5 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+
+
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecFive.png"></img>
+                            </a>
+
+
+
+                            <!-- start text div -->
+                            <div class="a-content">
+                                <h3 class="a-name">Lecture 5</h3></br>
+                                <div class="a-desc">
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p>MySQL Queries, Creating</p>
+
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 5 -->
+
+                    <!-- start lecture content 6 -->
+                    <div class="assignment">
+
+                        <!-- start lec div -->
+                        <div class="lec">
+
+
+
+                            <a href="../static/files/lec.pdf" target="_blank">
+                                <img class="preview" src="../static/images/lecSix.png"></img>
+                            </a>
+
+                            <!-- start text div -->
+                            <div class="a-content">
+                                <h3 class="a-name">Lecture 6</h3></br>
+                                <div class="a-desc">
+                                    <h3 class="subtopic">Topic</h3>
+                                    <p>MySQL Outer Joins, HTML</p>
+
+                                    <h3 class="subtopic">Prelecture Materials</h3>
+                                    <a class="general-link" target="_blank" href="https://www.w3schools.com">W3Schools</a>
+                                </div>
+                            </div>
+                            <!-- end text div -->
+
+                        </div>
+                        <!-- end lec div -->
+
+                    </div>
+                    <!-- end lecture content 6 -->
+
+                </div>
+                <!-- end lectures -->
+
+                <div class="empty-div"></div>
+            </div>
+
+        </div>
+        <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+
+    </div>
+    <!-- end wrapper -->
+</body>
+
+</html>

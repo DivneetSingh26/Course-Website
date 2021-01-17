@@ -1,0 +1,119 @@
+<!DOCTYPE html!>
+<html>
+
+  <head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../static/create.css">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/generalCode.css">
+    <title>CSCB20</title>
+  </head>
+
+  <body>
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+      <!-- start front -->
+      <div class="front">
+
+        <div id="stuff">
+            <div class='flash'>
+              {% include 'errorFlash.html' %}
+              {% block body %}{% endblock %}
+            </div>
+            <!-- start register box -->
+            <div id="register-box">
+                <div>
+                    <div class="line-div">
+                        <h1 id="course-label"><a class="cur-lin general-link" href="/index">Register</a></h1>
+                        <span class="css-line"></span>
+                    </div>
+                </div>
+                <form method="post" action="{{ url_for('createAccount') }}">
+                    <div id="info">
+                        <div class="row">
+                          <div class="name"> 
+                              <input class="input-field" type="text" placeholder=" First Name" name="first_name" value="{{
+                                  request.form.first_name }}" required>                        
+                          </div>
+                          <div class="name right-input"> 
+                              <input class="input-field" type="text" placeholder=" Last Name" name="last_name" value="{{
+                                  request.form.last_name }}" required>                        
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="email"> 
+                                <input class="input-field" type="email" placeholder=" E-mail" name="email" value="{{
+                                    request.form.email }}" required>                        
+                            </div>
+                            <div class="email right-input"> 
+                                <input class="input-field" type="email" placeholder=" Retype E-mail" name="emailConfirm" value="{{
+                                    request.form.emailConfirm }}" required>                        
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="password">
+                              <input type="password" placeholder="Password" name="password" value="{{
+                                  request.form.password }}" required>
+                          </div>
+                          <div class="password right-input">
+                              <input type="password" placeholder="Retype Password" name="passwordConfirm" value="{{
+                                  request.form.passwordConfirm }}" required>
+                          </div>
+                        </div>
+
+                        <div id="type">
+                                <select id="account-type" name="type" value="{{ request.form.instructor }}" required>
+                                  <option value="">Select Account Type:</option>
+                                  
+                                  <option value="student">Student</option>
+                                  <option value="instructor">Instructor</option>
+                                </select> 
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <button class="form-btn register-btn" value="Register">Register</button>
+                    </div>
+
+                    <div id="create-acc">
+                      <a class="general-link" href="/login">Have Account? Login Here</a>
+                    </div>
+                </form>
+                {% if error %}
+                    <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+            </div>
+            <!-- end register-box -->
+
+        </div>
+        <!-- end stuff -->
+
+      </div>
+      <!-- end content -->
+
+      <!-- start footer -->
+      <div id="footer">
+          <div id="foot-text">
+            <div  class="footer-content">
+              <p id="faculty-link"><a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a></p>
+              <p>Site designed by Jayesh Khullar and Divneet Singh</p>
+            </div>
+          </div>
+      </div>
+      <!-- end footer -->
+
+    </div>
+    <!-- end wrapper -->
+    <!-- script -->
+    <script src="../static/js/flash.js">
+        $(document).ready(function(){
+            document.getElementById('account-type').selectedIndex = 0;
+        });
+    </script>
+    <!-- end script-->
+
+  </body>
+
+</html>
